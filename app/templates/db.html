@@ -1,0 +1,9 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Database query</h1>
+  {% for line in lines %}
+  {{ line }}
+  {% endfor %}
+{% endblock %}

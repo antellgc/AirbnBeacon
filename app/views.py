@@ -50,3 +50,7 @@ def get_db():
 	return render_template("db.html",
     	title='Database',
     	lines=lines)
+
+@app.route('/theme')
+def get_started():
+	return render_template("theme.html")

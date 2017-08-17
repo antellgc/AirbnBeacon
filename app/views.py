@@ -54,3 +54,18 @@ def get_db():
 @app.route('/theme')
 def get_started():
 	return render_template("theme.html")
+
+@app.route('/input')
+def get_input():
+	return render_template("input.html",
+		title='Input')
+
+@app.route('/map')
+def get_map():
+	return render_template("map.html",
+		title='Map')
+
+@app.route('/about')
+def get_about():
+	return render_template("about.html",
+		title='About')

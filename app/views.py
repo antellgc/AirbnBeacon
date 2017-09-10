@@ -3,6 +3,8 @@ from app import app
 from .forms import LoginForm
 import sqlite3
 import pandas as pd
+import gmaps
+import gmplot
 
 database_path = './airbnb.db'
 
@@ -47,7 +49,7 @@ def get_input():
 	return render_template("input.html",
 		title='Input')
 
-@app.route('/map')
+@app.route('/map', methods=['GET', 'POST'])
 def get_map():
 	return render_template("map.html",
 		title='Map')

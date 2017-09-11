@@ -2,38 +2,15 @@
 
 {% block content %}
 
-
-
-<p>Nightly rate</p>
-<p>Bedrooms</p>
-<p>Bathrooms</p>
-<p>Address</p>
-
-<div class="col-md-6">
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Address</th>
-        <th>Bedrooms</th>
-        <th>Bathrooms</th>
-        <th>Estimated Cost</th>
-        <th>Projected Revenue</th>
-        <th>Profit</th>
-        <th>Profit Margin</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>24 Beach Street</td>
-        <td>4</td>
-        <td>3.5</td>
-        <td>$800</td>
-        <td>$1000</td>
-        <td>$200</td>
-        <td>20%</td>
-      </tr>
-    </tbody>
-  </table>
+<div>
+  <form action="/input/info" method="post">
+    Bedrooms:<br>
+    <input type="text" name="bedrooms"><br>
+    Bathrooms:<br>
+    <input type="text" name="bathrooms">
+    <br><br>
+    <input type="submit" value="Submit">
+  </form>
 </div>
 
 {% endblock %}

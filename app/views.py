@@ -1,4 +1,4 @@
-from flask import render_template, flash, redirect
+from flask import render_template, flash, request
 from app import app
 from .forms import LoginForm
 import sqlite3
@@ -35,8 +35,15 @@ def get_started():
 
 @app.route('/input')
 def get_input():
-	return render_template("input.html",
-		title='Input')
+    return render_template("input.html",
+        title='Input')
+
+@app.route('/input/info', methods=['POST'])
+def get_property_info():
+	bedrooms=request.form['bedrooms']
+	bathrooms=request.form('bathrooms')
+	return render_template("info.html", title='Input',
+		bedrooms=bedrooms, bathrooms=bathrooms)
 
 @app.route('/map', methods=['GET', 'POST'])
 def get_map():

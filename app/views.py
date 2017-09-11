@@ -41,7 +41,7 @@ def get_input():
 @app.route('/input/info', methods=['POST'])
 def get_property_info():
 	bedrooms=request.form['bedrooms']
-	bathrooms=request.form('bathrooms')
+	bathrooms=request.form['bathrooms']
 	return render_template("info.html", title='Input',
 		bedrooms=bedrooms, bathrooms=bathrooms)
 

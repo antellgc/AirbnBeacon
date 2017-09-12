@@ -1,6 +1,5 @@
 from flask import render_template, flash, request
 from app import app
-from .forms import LoginForm
 import sqlite3
 import pandas as pd
 import gmaps
@@ -13,6 +12,11 @@ database_path = './airbnb.db'
 def index():
     return render_template("index.html",
                            title='Home')
+
+@app.route('/altview')
+def altview():
+    return render_template("altview.html",
+                           title='Alt')
 
 @app.route('/db')
 def get_db():
@@ -33,12 +37,12 @@ def get_db():
 def get_started():
 	return render_template("theme.html")
 
-@app.route('/input')
+@app.route('/explore')
 def get_input():
-    return render_template("input.html",
-        title='Input')
+    return render_template("explore.html",
+        title='Explore')
 
-@app.route('/input/info', methods=['POST'])
+@app.route('/explore/info', methods=['POST'])
 def get_property_info():
 	bedrooms=request.form['bedrooms']
 	bathrooms=request.form['bathrooms']

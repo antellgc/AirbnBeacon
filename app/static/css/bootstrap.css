@@ -1582,6 +1582,7 @@ pre code {
   overflow-y: scroll;
 }
 .container {
+  margin-top: 20px;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -6458,6 +6459,50 @@ button.close {
     bottom: 20px;
   }
 }
+
+/* Carousel Header Styles */
+.header-text {
+    position: absolute;
+    top: 20%;
+    left: 1.8%;
+    right: auto;
+    width: 96.66666666666666%;
+    color: #fff;
+}
+
+.header-text h2 {
+    font-size: 40px;
+}
+
+.header-text h2 span {
+    background-color: #2980b9;
+  padding: 10px;
+}
+
+.header-text h3 span {
+  background-color: #000;
+  padding: 15px;
+}
+
+.btn-min-block {
+    min-width: 170px;
+    line-height: 26px;
+}
+
+.btn-theme {
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+    margin-right: 15px;
+}
+
+.btn-theme:hover {
+    color: #000;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+
 .clearfix:before,
 .clearfix:after,
 .dl-horizontal dd:before,

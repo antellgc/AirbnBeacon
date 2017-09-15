@@ -44,10 +44,17 @@ def get_input():
 
 @app.route('/explore/info', methods=['POST'])
 def get_property_info():
-	bedrooms=request.form['bedrooms']
-	bathrooms=request.form['bathrooms']
-	return render_template("info.html", title='Input',
-		bedrooms=bedrooms, bathrooms=bathrooms)
+    address = request.form['address']
+    accommodates = request.form['accommodates']
+    property_type = request.form['property_type']
+    room_type = request.form['room_type']
+    bedrooms=request.form['bedrooms']
+    bathrooms=request.form['bathrooms']
+    price = request.form['price']
+    return render_template("info.html", title='Input',
+		address=address, accommodates=accommodates,
+		property_type=property_type, room_type=room_type,
+		bedrooms=bedrooms, bathrooms=bathrooms, price=price)
 
 @app.route('/map', methods=['GET', 'POST'])
 def get_map():

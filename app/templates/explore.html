@@ -6,20 +6,28 @@
   <form action="/explore/info" method="post">
     Address:<br>
     <input type="text" name="address"><br>
-    Accommodates:<br>
-    <input type="text" name="accommodates"><br>
+
     Property type:<br>
-    <input type="text" name="property_type"><br>
+    <input type="radio" name="property_type" value="house"> House<br>
+    <input type="radio" name="property_type" value="condominium"> Condominum<br>
+    <input type="radio" name="property_type" value="bed_n_breakfast"> Bed & Breakfast<br>
     Room type:<br>
-    <input type="text" name="room_type"><br>
-    Bedrooms:<br>
-    <input type="text" name="bedrooms"><br>
-    Bathrooms:<br>
-    <input type="text" name="bathrooms"><br>
+    <input type="radio" name="room_type" value='entire_home'> Entire Home<br>
+    <input type="radio" name="room_type" value='private_room'> Private Room<br>
+    <input type="radio" name="room_type" value='shared_room'> Shared Room<br>
+
+    Accommodates (1-20):<br>
+    <input type="range" name="accommodates" min=1 max=20><br>
+    Bedrooms (1-10):<br>
+    <input type="range" name="bedrooms" min=1 max=10><br>
+    Bathrooms (1 -10):<br>
+    <input type="range" name="bathrooms" min=1 max=10><br>
+
     Price:<br>
     <input type="text" name="price"><br>
     <br>
     <input type="submit" value="Submit">
+    <input type="reset">
   </form>
 </div>
 

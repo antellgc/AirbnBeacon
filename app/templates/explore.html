@@ -1,29 +1,38 @@
-{% extends "newbase.html" %}
+{% extends "base.html" %}
 
 {% block content %}
 
 <div>
   <form action="/explore/info" method="post">
-    Address:<br>
+    <b>Address</b><br>
     <input type="text" name="address"><br>
+    <b>City</b><br>
+    <input type="text" name="city"><br>
+    <b>State</b><br>
+    <input type="text" name="state"><br>
+    <b>Zip</b><br>
+    <input type="int" name="zip"><br>
+    <br>
 
-    Property type:<br>
+    <b>Property type</b><br>
     <input type="radio" name="property_type" value="house"> House<br>
     <input type="radio" name="property_type" value="condominium"> Condominum<br>
-    <input type="radio" name="property_type" value="bed_n_breakfast"> Bed & Breakfast<br>
-    Room type:<br>
+    <input type="radio" name="property_type" value="bed_n_breakfast"> Bed and Breakfast<br>
+    <br>
+    <b>Room type</b><br>
     <input type="radio" name="room_type" value='entire_home'> Entire Home<br>
     <input type="radio" name="room_type" value='private_room'> Private Room<br>
     <input type="radio" name="room_type" value='shared_room'> Shared Room<br>
+    <br>
 
-    Accommodates (1-20):<br>
+    <b>Accommodates (1-20)</b><br>
     <input type="range" name="accommodates" min=1 max=20><br>
-    Bedrooms (1-10):<br>
+    <b>Bedrooms (1-10)</b><br>
     <input type="range" name="bedrooms" min=1 max=10><br>
-    Bathrooms (1 -10):<br>
+    <b>Bathrooms (1 -10)</b><br>
     <input type="range" name="bathrooms" min=1 max=10><br>
 
-    Price:<br>
+    <b>Price Per Night</b><br>
     <input type="text" name="price"><br>
     <br>
     <input type="submit" value="Submit">

@@ -1,11 +1,13 @@
-{% extends "newbase.html" %}
+{% extends "base.html" %}
 
 {% block content %}
 
 <div>
-	<p>The address entered is: {{address}}</p>
+	<p>The address entered is: {{address}} at {{city}}, {{state}} {{zipcode}}</p>
 	<p>You chose a property type of {{property_type}} and a room type of {{room_type}} that accommodates {{accommodates}} people.</p>
 	<p>Searching for {{bedrooms}} bedrooms and {{bathrooms}} bathrooms at {{price}}...</p>
+
+	<p>HERE IS THE OUTPUT {{text_length}}</p>
 </div>
 
 {% endblock %}

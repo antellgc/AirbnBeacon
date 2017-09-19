@@ -6,7 +6,8 @@ import gmaps
 import gmplot
 
 import sys
-
+sys.path.append('./app/scripts')
+from models import simplest_model
 
 database_path = './airbnb.db'
 
